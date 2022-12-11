@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body {
+    background: var(--color-bg);
   }
-  to {
-    transform: rotate(360deg);
+  a {
+      color: unset;
+      text-decoration: none;
   }
+  .gradient__bg {
+
+    /* ff 3.6+ */
+    background:-moz-linear-gradient(180deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 3%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(180deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 3%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(180deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 3%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F0F0F0', GradientType=1 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(180deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 3%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(180deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 3%);
+
 }
+ 
+  .gradient__text {
+      background: var(--gradient-text);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  .section__padding {
+      padding: 8rem 8rem;
+  }
+  .section__margin {
+      padding: 4rem 6rem;
+  }
+  .scale-up-center {
+      -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @media screen and (max-width: 700px) {
+      .section__padding {
+          padding: 4rem;
+      }
+      .section__margin {
+          padding: 4rem;
+      }
+  }
+  @media screen and (max-width: 550px) {
+      .section__padding {
+          padding: 4rem 2rem;
+      }
+      .section__margin {
+          padding: 4rem 2rem;
+      }
+  }
+  
