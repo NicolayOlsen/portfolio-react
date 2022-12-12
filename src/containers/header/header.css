@@ -29,7 +29,7 @@
     transition: 0.5s;
 }
 .portfolio__header-content a:hover {
-    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.20);
     transition: 0.5s;
 }
 .portfolio__header-content img {

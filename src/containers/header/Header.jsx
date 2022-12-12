@@ -2,6 +2,7 @@ import React from 'react'
 import "./header.css"
 import react from "../../assets/react.png"
 import tailwind from "../../assets/tailwind.png"
+import Me from "../../assets/AI-Me.png"
 
 const Header = () => {
 
@@ -20,8 +21,8 @@ const Header = () => {
   return (
     <div className='portfolio__header section__padding' id="home">
       <div className='portfolio__header-content'>
-        <img src={react} data-value="1" alt="react" />
-        <img src={tailwind} data-value="1" alt="tailwind" />
+        <img src={Me} data-value="2" alt="me" />
+        
         <h1>Hi👋,<br/>I'm <span className="gradient__text">Nicolay Andre Olsen</span><br/> Frontend Developer</h1>
         <a href=''>Download CV</a>
       </div>
