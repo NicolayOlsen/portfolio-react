@@ -6,9 +6,10 @@
   --gradient-text: linear-gradient(89.97deg, #007ED4 1.84%, #C482EE 102.67%);
   --gradient-bar: linear-gradient(103.22deg, #007ED4 -13.86%, #C482EE 99.55%);
   
+  --color-bg: #fff;
+  --color-bg-dark: #252525;
   --color-white: #ffffff;
   --color-footer : #031B34;
   --color-blog: #042c54;
-  --color-dark: rgb(37, 37, 37);
-  --color-subtext: #FF8A71;
+  --color-dark: #252525;
 }

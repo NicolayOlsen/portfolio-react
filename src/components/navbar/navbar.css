@@ -2,8 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+    background-color: var(--color-white);
     padding: 2rem 6rem;
+  }
+  .portfolio__navbar-darkmode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg-dark);
   }
   .portfolio__navbar-links {
     flex: 2;
