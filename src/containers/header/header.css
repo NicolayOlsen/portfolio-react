@@ -44,3 +44,6 @@
     -webkit-user-drag: none;
     user-select: none;
 }
+.portfolio__header-social {
+    z-index: 2;
+}

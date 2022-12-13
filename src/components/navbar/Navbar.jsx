@@ -2,25 +2,40 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 
-const Menu = () => (
-  <>
-    <p>
-      <a href="#home">Home</a>
-    </p>
-    <p>
-      <a href="#about">About</a>
-    </p>
-    <p>
-      <a href="#skills">Skills</a>
-    </p>
-    <p>
-      <a href="#projects">Projects</a>
-    </p>
-    <p>
-      <a href="#contact">Contact</a>
-    </p>
-  </>
-);
+const Menu = () => {
+  // Get the current URL of the page
+  const currentUrl = window.location.href;
+
+  return (
+    <>
+      <p>
+        <a href="#home" className={currentUrl.endsWith("#home") ? "active" : ""}>
+          Home
+        </a>
+      </p>
+      <p>
+        <a href="#about" className={currentUrl.endsWith("#about") ? "active" : ""}>
+          About
+        </a>
+      </p>
+      <p>
+        <a href="#skills" className={currentUrl.endsWith("#skills") ? "active" : ""}>
+          Skills
+        </a>
+      </p>
+      <p>
+        <a href="#projects" className={currentUrl.endsWith("#projects") ? "active" : ""} >
+          Projects
+        </a>
+      </p>
+      <p>
+        <a href="#contact" className={currentUrl.endsWith("#contact") ? "active" : ""} >
+          Contact
+        </a>
+      </p>
+    </>
+  );
+};
 // BEM --> Block Element Modifier
 
 const Navbar = () => {
