@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div className='portfolio__header section__padding' id="home">
       <div className='portfolio__header-content'>
-        <img src={Me} data-value="2" alt="me" />
+        <img src={Me} data-value="0.7" alt="me" />
         
         <h1>Hi👋,<br/>I'm <span className="gradient__text">Nicolay Andre Olsen</span><br/> Frontend Developer</h1>
         <a href=''>Download CV</a>
