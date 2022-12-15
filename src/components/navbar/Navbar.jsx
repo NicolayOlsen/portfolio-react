@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 
 const Menu = () => {
   // Get the current URL of the page
-  const currentUrl = window.location.href;
+  const [currentUrl, setCurrentUrl] = useState(window.location.href);
+
+  useEffect(() => {
+    // Update the current URL when the URL changes
+    window.addEventListener("hashchange", () => {
+      setCurrentUrl(window.location.href);
+    });
+  });
+
 
   return (
     <>

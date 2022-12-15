@@ -16,13 +16,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
   }
-  .active::after {
-    color: green;
+  .portfolio__navbar-links a.active {
+    position: relative;
+  }
+  .portfolio__navbar-links a.active::before {
     content: "";
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 0.18rem;
-    background-color: var(--gradient-bar);
+    background: var(--gradient-bar);
   }
   .portfolio__navbar-links h1 {
     font-family: var(--font-family);
