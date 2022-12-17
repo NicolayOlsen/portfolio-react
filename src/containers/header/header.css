@@ -1,7 +1,5 @@
 .portfolio__header {
     display: flex;
-    color: var(--color-dark);
-    background-color: var(--color-bg);
 }
 .portfolio__header-content {
     flex: 1;
@@ -29,7 +27,7 @@
     transition: 0.5s;
 }
 .portfolio__header-content a:hover {
-    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
 }
 .portfolio__header-content img {
@@ -46,4 +44,32 @@
 }
 .portfolio__header-social {
     z-index: 2;
+}
+@media screen and (max-width: 1400px) {
+    .portfolio__header-content h1 {
+        font-weight: 800;
+        font-size: 52px;
+        line-height: 65px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .portfolio__header-content h1 {
+        font-weight: 800;
+        font-size: 42px;
+        line-height: 55px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .portfolio__header-content {
+        position: relative;
+    }
+    .portfolio__header-content img {
+        height: auto;
+        width: 200%;
+        margin-top: 17rem;
+    }
+    .portfolio__header-content h1 {
+        font-size: 42px;
+        line-height: 55px;
+    }
 }

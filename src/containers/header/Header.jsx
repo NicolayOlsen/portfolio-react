@@ -1,7 +1,5 @@
 import React from 'react'
 import "./header.css"
-import react from "../../assets/react.png"
-import tailwind from "../../assets/tailwind.png"
 import Me from "../../assets/AI-Me.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

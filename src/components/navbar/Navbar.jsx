@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
+import IconButton from '@mui/material/IconButton';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 
-const Menu = () => {
+const Menu = ({ darkThemeEnabled }) => {
+  
   // Get the current URL of the page
   const [currentUrl, setCurrentUrl] = useState(window.location.href);
 
@@ -46,27 +52,64 @@ const Menu = () => {
 };
 // BEM --> Block Element Modifier
 
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+  },
+});
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 const Navbar = () => {
+  const [darkThemeEnabled, setDarkThemeEnabled] = useState(
+    localStorage.getItem("theme") === "dark" ? true : false
+  );
+
+  useEffect(() => {
+    if (darkThemeEnabled) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkThemeEnabled]);
+
+  const toggleTheme = () => {
+    setDarkThemeEnabled(!darkThemeEnabled);
+  };
+
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div className="portfolio__navbar">
       <div className="portfolio__navbar-links">
-          <h1>Portfolio</h1>
+          <h1 href="#">Portfolio</h1>
         <div className="portfolio__navbar-links_container">
-          <Menu />
+          <Menu darkThemeEnabled={darkThemeEnabled} />
+          <ThemeProvider theme={darkThemeEnabled ? lightTheme : darkTheme}>
+          <CssBaseline />
+          <IconButton onClick={toggleTheme} className="darkmode" color="inherit">
+          {darkThemeEnabled ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+        </ThemeProvider>
         </div>
       </div>
     
       <div className="portfolio__navbar-menu">
+        <IconButton onClick={toggleTheme}>
+          {darkThemeEnabled ? <Brightness7Icon /> : <Brightness4Icon />}
+        </IconButton>
         {toggleMenu ? (
-          <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
+          <RiCloseLine color="#252525" size={27} onClick={() => setToggleMenu(false)} />
         ) : (
-          <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />
+          <RiMenu3Line color="#252525" size={27} onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
           <div className="portfolio__navbar-menu_container scale-up-center">
             <div className="portfolio__navbar-menu_container-links"></div>
-            <Menu />
+            <Menu darkThemeEnabled={darkThemeEnabled} />
           </div>
         )}
       </div>
