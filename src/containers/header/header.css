@@ -1,5 +1,6 @@
 .portfolio__header {
     display: flex;
+    height: 80vh;
 }
 .portfolio__header-content {
     flex: 1;

@@ -3,7 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Fade from '@mui/material/Fade';
-import { Navbar } from './components';
+import { Navbar, About, ScrollTopButton } from './components';
 import { Header } from "./containers";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -31,13 +31,14 @@ const App = () => {
   return (
     <ThemeProvider theme={darkThemeEnabled ? lightTheme : darkTheme}>
       <CssBaseline />
-      <div>
+      <div id='top'>
         <Navbar>
           <IconButton className='darkmode' onClick={toggleTheme}>
             {lightTheme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Navbar>
         <Header />
+        <About />
       </div>
     </ThemeProvider>
   );

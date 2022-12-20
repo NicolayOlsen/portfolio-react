@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div className='portfolio__header section__padding' id="home">
       <div className='portfolio__header-content'>
-        <img src={Me} data-value="1" alt="nicolay" />
+        {/*<img src={Me} data-value="1" alt="nicolay" />*/}
         <h1>Hi👋,<br/>I'm <span className="gradient__text">Nicolay Andre Olsen</span><br/> Frontend Developer</h1>
         <a href=''>Download CV</a>
       </div>

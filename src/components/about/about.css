@@ -1,0 +1,75 @@
+.portfolio__cards {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio__cards-about {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 55vh;
+    margin: 0 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0px 100px rgba(63, 63, 63, 0.2);
+}
+.portfolio__cards-about p {
+    font-family: var(--font-family);
+    text-align: center;
+    margin: 2rem 3rem;
+}
+.portfolio__cards-about a {
+    font-family: var(--font-family);
+    background: var(--gradient-bar);
+    color: var(--color-white);
+    padding: 0.75rem 2rem;
+    margin: 1rem 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+.portfolio__cards-about a:hover {
+    transition: 0.5s;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.20);
+}
+.portfolio__cards-skills {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 50vh;
+    margin: 0 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0px 100px rgba(63, 63, 63, 0.2);
+    transition: 0.5s;
+
+}
+.portfolio__cards-skills:hover {
+    height: 55vh;
+    transition: 0.5s;
+}
+.portfolio__cards-skills p {
+    font-family: var(--font-family);
+    text-align: center;
+    margin: 2rem 3rem;
+}
+.portfolio__cards-education {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 50vh;
+    margin: 0 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0px 100px rgba(63, 63, 63, 0.2);
+}
+.portfolio__cards-education p {
+    font-family: var(--font-family);
+    text-align: center;
+    margin: 2rem 3rem;
+}

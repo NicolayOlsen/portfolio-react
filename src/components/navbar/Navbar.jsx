@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
+import ScrollTopButton from "./ScrollTopButton";
 
 const Menu = ({ darkThemeEnabled }) => {
   
@@ -84,6 +85,7 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div className="portfolio__navbar">
+      <ScrollTopButton />
       <div className="portfolio__navbar-links">
           <h1 href="#">Portfolio</h1>
         <div className="portfolio__navbar-links_container">
