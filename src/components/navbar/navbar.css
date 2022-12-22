@@ -75,6 +75,8 @@
     width: 45px;
     margin: 1.5rem;
     cursor: pointer;
+    border-radius: 2rem;
+    box-shadow: 0 5px 36px rgba(0, 0, 0, 0.35);
   }
   @media screen and (max-width: 1050px) {
     .portfolio__navbar {

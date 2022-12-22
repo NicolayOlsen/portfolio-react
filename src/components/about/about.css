@@ -3,6 +3,7 @@
     height: 50vh;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
 }
 .portfolio__cards-about {
     z-index: 2;
@@ -10,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     width: 30vw;
-    height: 55vh;
+    height: 53vh;
     margin: 0 1rem;
     border-radius: 2rem;
     box-shadow: 0 0px 100px rgba(63, 63, 63, 0.2);
@@ -18,7 +19,7 @@
 .portfolio__cards-about p {
     font-family: var(--font-family);
     text-align: center;
-    margin: 2rem 3rem;
+    margin: 2rem 4rem;
 }
 .portfolio__cards-about a {
     font-family: var(--font-family);
@@ -49,7 +50,7 @@
 
 }
 .portfolio__cards-skills:hover {
-    height: 55vh;
+    height: 51vh;
     transition: 0.5s;
 }
 .portfolio__cards-skills p {
@@ -67,6 +68,11 @@
     margin: 0 1rem;
     border-radius: 2rem;
     box-shadow: 0 0px 100px rgba(63, 63, 63, 0.2);
+    transition: 0.5s;
+}
+.portfolio__cards-education:hover {
+    height: 51vh;
+    transition: 0.5s;
 }
 .portfolio__cards-education p {
     font-family: var(--font-family);

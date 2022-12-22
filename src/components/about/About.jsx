@@ -5,7 +5,12 @@ const About = () => {
   return (
       <div className='portfolio__cards' id='about'>
           <div className='portfolio__cards-skills'>
-            <h1 className='gradient__text section__title'>Skills</h1>        
+            <h1 className='gradient__text section__title'>Skills</h1>  
+            <div className='portfolio__cards-skills__content'>
+              <div className=''>
+                
+              </div>
+            </div>
           </div>
           <div className='portfolio__cards-about'>
               <h1 className='gradient__text section__title'>About Me</h1>

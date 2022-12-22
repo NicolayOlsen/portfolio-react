@@ -34,11 +34,6 @@ const Menu = ({ darkThemeEnabled }) => {
         </a>
       </p>
       <p>
-        <a href="#skills" className={currentUrl.endsWith("#skills") ? "active" : ""}>
-          Skills
-        </a>
-      </p>
-      <p>
         <a href="#projects" className={currentUrl.endsWith("#projects") ? "active" : ""} >
           Projects
         </a>

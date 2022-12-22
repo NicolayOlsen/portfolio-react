@@ -21,8 +21,10 @@ const Header = () => {
     <div className='portfolio__header section__padding' id="home">
       <div className='portfolio__header-content'>
         {/*<img src={Me} data-value="1" alt="nicolay" />*/}
-        <h1>Hi👋,<br/>I'm <span className="gradient__text">Nicolay Andre Olsen</span><br/> Frontend Developer</h1>
-        <a href=''>Download CV</a>
+        <div className='portfolio__header-content__introduction'>
+          <h1>Hi👋,<br/>I'm <span className="gradient__text">Nicolay Andre Olsen</span><br/> Frontend Developer</h1>
+          <a href=''>Download CV</a>
+        </div>
       </div>
       <div class="portfolio__header-social">
         <a href="https://www.linkedin.com/in/nicolay-andre-o-0b120b204/"><FontAwesomeIcon icon="fab fa-linkedin" /></a>
